@@ -18,7 +18,8 @@
   "exports": {
     ".": {
       "import": "./dist/utils.es.js",
-      "require": "./dist/utils.umd.js"
+      "require": "./dist/utils.umd.js",
+      "types": "./dist/utils.d.ts"
     }
   },
   "scripts": {
