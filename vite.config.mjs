@@ -3,9 +3,9 @@ import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [dts({ rollupTypes: true })],
+  base: "./",
+  plugins: [dts({ insertTypesEntry: true })],
   build: {
-    sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, "lib/main.ts"),
       name: "@smallstack/utils",

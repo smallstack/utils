@@ -19,7 +19,7 @@
     "noUnusedParameters": false,
     "noImplicitReturns": false,
     "forceConsistentCasingInFileNames": true,
-    "types": ["vite/client"]
+    "declaration": true
   },
   "include": ["lib"],
   "exclude": ["node_modules"]
