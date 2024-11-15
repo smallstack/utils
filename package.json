@@ -1,0 +1,37 @@
+{
+  "name": "@smallstack/utils",
+  "version": "0.1.0",
+  "description": "Opinionated selection of util functions used by smallstack projects",
+  "keywords": [
+    "utils",
+    "smallstack"
+  ],
+  "author": "smallstack GmbH",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/utils.umd.js",
+  "module": "./dist/utils.es.js",
+  "types": "./dist/utils.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/utils.es.js",
+      "require": "./dist/utils.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-plugin-dts": "^4.3.0"
+  },
+  "volta": {
+    "node": "22.11.0"
+  }
+}
