@@ -4,12 +4,34 @@ import dts from "vite-plugin-dts";
 
 export default defineConfig({
   base: "./",
-  plugins: [dts({ insertTypesEntry: true })],
+  plugins: [dts()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "lib/main.ts"),
       name: "@smallstack/utils",
-      fileName: (format) => `utils.${format}.js`,
+      entry: {
+        main: path.resolve(__dirname, "lib/main.ts"),
+        string: path.resolve(__dirname, "lib/modules/string/index.ts"),
+      },
+      fileName: (format, entryName) => `utils.${entryName}.${format}.js`,
+    },
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    include: ["lib/**/*.test.ts"],
+    setupFiles: ["./setupTest.js"],
+    coverage: {
+      provider: "v8",
+      include: ["lib/**"],
+      exclude: ["node_modules/**"],
+      reporter: ["lcov", "clover", "text-summary"],
+      reportsDirectory: "coverage",
+      // thresholds: {
+      //   statements: 100,
+      //   branches: 100,
+      //   functions: 100,
+      //   lines: 100
+      // }
     },
   },
 });

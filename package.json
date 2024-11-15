@@ -19,18 +19,28 @@
     ".": {
       "import": "./dist/utils.es.js",
       "require": "./dist/utils.umd.js",
-      "types": "./dist/utils.d.ts"
+      "types": "./dist/main.d.ts"
+    },
+    "./string": {
+      "import": "./dist/utils.string.es.js",
+      "require": "./dist/utils.string.umd.js",
+      "types": "./dist/modules/string/index.d.ts"
     }
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest --coverage"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@vitest/coverage-v8": "^2.1.5",
+    "jsdom": "^25.0.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.11",
-    "vite-plugin-dts": "^4.3.0"
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^2.1.5"
   },
   "volta": {
     "node": "22.11.0"

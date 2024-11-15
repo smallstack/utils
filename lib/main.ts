@@ -1,2 +1,2 @@
-export { upperCaseFirst } from "./utils/string.utils";
+export * from "./modules/string";
 
