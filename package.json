@@ -25,6 +25,11 @@
       "import": "./dist/utils.string.es.js",
       "require": "./dist/utils.string.umd.js",
       "types": "./dist/modules/string/index.d.ts"
+    },
+    "./number": {
+      "import": "./dist/utils.number.es.js",
+      "require": "./dist/utils.number.umd.js",
+      "types": "./dist/modules/number/index.d.ts"
     }
   },
   "scripts": {
