@@ -11,6 +11,7 @@ export default defineConfig({
       entry: {
         main: path.resolve(__dirname, "lib/main.ts"),
         string: path.resolve(__dirname, "lib/modules/string/index.ts"),
+        number: path.resolve(__dirname, "lib/modules/number/index.ts"),
       },
       fileName: (format, entryName) => `utils.${entryName}.${format}.js`,
     },
