@@ -30,6 +30,11 @@
       "import": "./dist/utils.number.es.js",
       "require": "./dist/utils.number.umd.js",
       "types": "./dist/modules/number/index.d.ts"
+    },
+    "./object": {
+      "import": "./dist/utils.object.es.js",
+      "require": "./dist/utils.object.umd.js",
+      "types": "./dist/modules/object/index.d.ts"
     }
   },
   "scripts": {

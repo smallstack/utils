@@ -12,6 +12,7 @@ export default defineConfig({
         main: path.resolve(__dirname, "lib/main.ts"),
         string: path.resolve(__dirname, "lib/modules/string/index.ts"),
         number: path.resolve(__dirname, "lib/modules/number/index.ts"),
+        object: path.resolve(__dirname, "lib/modules/object/index.ts"),
       },
       fileName: (format, entryName) => `utils.${entryName}.${format}.js`,
     },
