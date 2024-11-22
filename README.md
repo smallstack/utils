@@ -9,4 +9,5 @@ npm i @smallstack/utils
 ```
 
 ## Usage
-The package has a main entry as well as several sub entries.
+The package has a main entry as well as several sub entries, see https://github.com/smallstack/utils/blob/main/vite.config.mjs
+
