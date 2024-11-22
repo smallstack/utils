@@ -42,7 +42,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest --coverage",
-    "release:patch": "npm version patch && npm run build && npm publish"
+    "release:patch": "npm version patch"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
