@@ -66,5 +66,6 @@ describe("Schema Utils", () => {
 
     expect(getSchemaForPath(schema, "invalid")).toEqual(undefined);
     expect(getSchemaForPath(schema, "address.invalid")).toEqual(undefined);
+    expect(getSchemaForPath({type:"object"}, "address")).toEqual(undefined);
   });
 });
