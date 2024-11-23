@@ -18,5 +18,7 @@ describe("ObjectUtils", () => {
         { removeEmptyArrays: true, removeEmptyObjects: true }
       )
     ).toEqual({});
+    expect(removeNullish(undefined)).toBeUndefined();
+    expect(removeNullish({test: ""}, { removeEmptyStrings: true })).toEqual({});
   });
 });
