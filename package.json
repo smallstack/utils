@@ -40,14 +40,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
     "test": "vitest --coverage",
     "release:patch": "npm version patch"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
     "@vitest/coverage-v8": "^2.1.5",
-    "jsdom": "^25.0.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.11",
     "vite-plugin-dts": "^4.3.0",

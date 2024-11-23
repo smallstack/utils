@@ -19,21 +19,20 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    environment: "jsdom",
+    environment: "node",
     include: ["lib/**/*.test.ts"],
-    setupFiles: ["./setupTest.js"],
     coverage: {
       provider: "v8",
       include: ["lib/**"],
       exclude: ["node_modules/**"],
       reporter: ["lcov", "clover", "text-summary"],
       reportsDirectory: "coverage",
-      // thresholds: {
-      //   statements: 100,
-      //   branches: 100,
-      //   functions: 100,
-      //   lines: 100
-      // }
+      thresholds: {
+        statements: 100,
+        branches: 100,
+        functions: 100,
+        lines: 100
+      }
     },
   },
 });
