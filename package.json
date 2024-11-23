@@ -41,7 +41,7 @@
     "dev": "vite",
     "build": "vite build",
     "test": "vitest --coverage",
-    "release:patch": "npm version patch"
+    "release:patch": "npm version patch && git push --tags"
   },
   "devDependencies": {
     "@codecov/vite-plugin": "^1.4.0",
