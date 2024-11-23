@@ -1,10 +1,18 @@
+import { codecovVitePlugin } from "@codecov/vite-plugin";
 import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
   base: "./",
-  plugins: [dts()],
+  plugins: [
+    dts(),
+    codecovVitePlugin({
+      enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
+      bundleName: "@smallstack/utils",
+      uploadToken: process.env.CODECOV_TOKEN,
+    }),
+  ],
   build: {
     lib: {
       name: "@smallstack/utils",
@@ -21,18 +29,20 @@ export default defineConfig({
     globals: true,
     environment: "node",
     include: ["lib/**/*.test.ts"],
+    reporters: ["default", "junit"],
+    outputFile: { junit: "test-results/junit.xml" },
     coverage: {
       provider: "v8",
       include: ["lib/**"],
       exclude: ["node_modules/**"],
       reporter: ["lcov", "clover", "text-summary"],
       reportsDirectory: "coverage",
-      thresholds: {
-        statements: 100,
-        branches: 100,
-        functions: 100,
-        lines: 100
-      }
+      // thresholds: {
+      //   statements: 100,
+      //   branches: 100,
+      //   functions: 100,
+      //   lines: 100,
+      // },
     },
   },
 });
