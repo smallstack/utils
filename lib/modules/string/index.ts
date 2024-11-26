@@ -1,2 +1,1 @@
-export { upperCaseFirst } from "./string.utils";
-
+export * from "./string.utils";
