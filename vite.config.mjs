@@ -34,7 +34,7 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       include: ["lib/**"],
-      exclude: ["node_modules/**", "lib/main.ts", "lib/**/index.ts"],
+      exclude: ["node_modules/**", "lib/main.ts", "lib/**/index.ts", "lib/**/*.test.ts"],
       reporter: ["lcov", "clover", "text-summary"],
       reportsDirectory: "coverage",
       thresholds: {
