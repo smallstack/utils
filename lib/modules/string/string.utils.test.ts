@@ -1,6 +1,7 @@
 import { describe, expect, test } from "vitest";
 import {
   camelCaseToSnakeCase,
+  getTimeAsCharacters,
   lowerCaseFirst,
   snakeCaseToCamelCase,
   upperCaseFirst,
@@ -36,6 +37,7 @@ describe("upperCaseFirst", () => {
 describe("lowerCaseFirst", () => {
   test("should return an empty string when input is an empty string", () => {
     expect(lowerCaseFirst("")).toBe("");
+    expect(lowerCaseFirst(undefined as any)).toBe(undefined);
   });
 
   test("should lowercase the first letter of a single character string", () => {
@@ -91,5 +93,12 @@ describe("snakeCaseToCamelCase", () => {
 
   test("should handle strings with leading whitespace correctly", () => {
     expect(snakeCaseToCamelCase(" hello_world")).toBe(" helloWorld");
+  });
+});
+
+describe("getTimeAsCharacters", () => {
+  test("should return a string based on the given timestamp", () => {
+    const timestamp = 1732608080598;
+    expect(getTimeAsCharacters(timestamp)).toBe("bhdcgaiaiafji");
   });
 });
