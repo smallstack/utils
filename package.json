@@ -11,30 +11,34 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/utils.umd.js",
-  "module": "./dist/utils.es.js",
-  "types": "./dist/utils.d.ts",
+  "main": "./dist/utils.main.cjs.js",
+  "module": "./dist/utils.main.es.js",
+  "types": "./dist/main.d.ts",
   "type": "module",
   "exports": {
     ".": {
       "import": "./dist/utils.es.js",
-      "require": "./dist/utils.umd.js",
-      "types": "./dist/main.d.ts"
+      "require": "./dist/utils.cjs.js",
+      "types": "./dist/main.d.ts",
+      "default": "./dist/utils.cjs.js"
     },
     "./string": {
       "import": "./dist/utils.string.es.js",
-      "require": "./dist/utils.string.umd.js",
-      "types": "./dist/modules/string/index.d.ts"
+      "require": "./dist/utils.string.cjs.js",
+      "types": "./dist/modules/string/index.d.ts",
+      "default": "./dist/utils.string.cjs.js"
     },
     "./number": {
       "import": "./dist/utils.number.es.js",
-      "require": "./dist/utils.number.umd.js",
-      "types": "./dist/modules/number/index.d.ts"
+      "require": "./dist/utils.number.cjs.js",
+      "types": "./dist/modules/number/index.d.ts",
+      "default": "./dist/utils.number.cjs.js"
     },
     "./object": {
       "import": "./dist/utils.object.es.js",
-      "require": "./dist/utils.object.umd.js",
-      "types": "./dist/modules/object/index.d.ts"
+      "require": "./dist/utils.object.cjs.js",
+      "types": "./dist/modules/object/index.d.ts",
+      "default": "./dist/utils.object.cjs.js"
     }
   },
   "scripts": {
