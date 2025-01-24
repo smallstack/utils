@@ -22,7 +22,10 @@ export default defineConfig({
         number: path.resolve(__dirname, "lib/modules/number/index.ts"),
         object: path.resolve(__dirname, "lib/modules/object/index.ts"),
       },
-      fileName: (format, entryName) => `utils.${entryName}.${format}.js`,
+      fileName: (format, entryName) => {
+        if (format === "cjs") return `utils.${entryName}.cjs`;
+        return `utils.${entryName}.${format}.js`;
+      },
     },
   },
   test: {
@@ -34,7 +37,12 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       include: ["lib/**"],
-      exclude: ["node_modules/**", "lib/main.ts", "lib/**/index.ts", "lib/**/*.test.ts"],
+      exclude: [
+        "node_modules/**",
+        "lib/main.ts",
+        "lib/**/index.ts",
+        "lib/**/*.test.ts",
+      ],
       reporter: ["lcov", "clover", "text-summary"],
       reportsDirectory: "coverage",
       thresholds: {

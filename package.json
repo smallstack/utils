@@ -11,7 +11,7 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/utils.main.cjs.js",
+  "main": "./dist/utils.main.cjs",
   "module": "./dist/utils.main.es.js",
   "types": "./dist/main.d.ts",
   "type": "module",
@@ -19,22 +19,22 @@
     ".": {
       "types": "./dist/main.d.ts",
       "import": "./dist/utils.main.es.js",
-      "require": "./dist/utils.main.cjs.js"
+      "require": "./dist/utils.main.cjs"
     },
     "./string": {
       "types": "./dist/modules/string/index.d.ts",
       "import": "./dist/utils.string.es.js",
-      "require": "./dist/utils.string.cjs.js"
+      "require": "./dist/utils.string.cjs"
     },
     "./number": {
       "types": "./dist/modules/number/index.d.ts",
       "import": "./dist/utils.number.es.js",
-      "require": "./dist/utils.number.cjs.js"
+      "require": "./dist/utils.number.cjs"
     },
     "./object": {
       "types": "./dist/modules/object/index.d.ts",
       "import": "./dist/utils.object.es.js",
-      "require": "./dist/utils.object.cjs.js"
+      "require": "./dist/utils.object.cjs"
     }
   },
   "scripts": {
