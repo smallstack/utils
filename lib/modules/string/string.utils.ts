@@ -38,3 +38,19 @@ export function getTimeAsCharacters(timestamp = Date.now()): string {
     .map((n) => (Number(n) + 10).toString(36))
     .join("");
 }
+
+/** returns true if given string is typeof string & not undefined & not null & not '' */
+export function isNonEmptyString(str: unknown): boolean {
+  return (
+    typeof str === "string" &&
+    str !== "" &&
+    str !== null &&
+    str !== undefined &&
+    str.trim() !== ""
+  );
+}
+
+/** returns true if given string is typeof string and equals to "" */
+export function isEmptyString(str: unknown): boolean {
+  return typeof str === "string" && str === "";
+}
