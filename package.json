@@ -1,6 +1,6 @@
 {
   "name": "@smallstack/utils",
-  "version": "3.0.12",
+  "version": "3.0.13",
   "description": "Opinionated selection of util functions used by smallstack projects",
   "keywords": [
     "utils",
